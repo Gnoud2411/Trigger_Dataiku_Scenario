@@ -1,5 +1,5 @@
 # Trigger_Dataiku_Scenario
-
+![Mô tả kiến trúc](docker/dataiku/Architeture.png)
 
 # Running the project
 To successfully run this project, follow the steps outlined below
