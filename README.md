@@ -1,5 +1,5 @@
 # Trigger_Dataiku_Scenario
-![Architectural Description](document/Architeture.png)
+![Architectural Description](document/Architecture.png)
 
 This project is designed to demonstrate the data interaction process between Dataiku and Snowflake, with the Dataiku Scenario being orchestrated by Airflow
 Dataiku Project overview
