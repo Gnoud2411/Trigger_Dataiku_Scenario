@@ -1,20 +1,20 @@
 # Trigger_Dataiku_Scenario
 ![Architectural Description](document/Architeture.png)
 
-Dự án được thiết kế để Demo quá trình tương tác dữ liệu giữa Dataiku và Snowflake, trong đó Dataiku Scenario sẽ được điều phối bởi Airflow
-
+This project is designed to demonstrate the data interaction process between Dataiku and Snowflake, with the Dataiku Scenario being orchestrated by Airflow
 Dataiku Project overview
 
-Project được thiết kế theo logic như sau:
-- Bước 1: Tích hợp dữ liệu
-+ Dữ liệu từ các file csv được vào tầng Staging - Bảng Raw_Churn_Dataset trong Schema Raw để phục vụ cho bước biến đổi 
+### The project is structured as follows:
 
-- Bước 2: Biến đổi dữ liệu
-+ Dữ liệu thô sẽ được khử duplicate, chuẩn hóa các trường dữ liệu
+Step 1: Data Integration
+- Data from CSV files will be ingested into the Staging layer, stored in the Raw_Churn_Dataset table within the Raw Schema, to facilitate the data transformation process
 
-- Bước 3: Load dữ liệu
-+ Dữ liệu sau khi được làm sạch sẽ được Incremental Update vào bảng DWH_Churn_Dataset trong Schema Dev của Snowflake
-+ Dữ liệu về các bản ghi có số lượng giao dịch bất thường sẽ được gửi Email cảnh báo
+Step 2: Data Transformation
+- The raw data will be cleaned by removing duplicate records and standardizing data fields
+
+Step 3: Data Loading
+- The cleaned data will be incrementally updated into the DWH_Churn_Dataset table within the Dev Schema in Snowflake
+- Records with unusual transaction volumes will trigger email alerts
 
 ---
 # Running the project
@@ -49,6 +49,9 @@ docker compose up airflow-init
 ```docker
 docker compose up -d
 ```
+
+
+
 
 ### Output Dashboard
 ![Output Dashboard 1](document/Customer_dashboard_1.png)
