@@ -55,7 +55,7 @@ docker compose up airflow-init
 ```docker
 docker compose up -d
 ```
-7. Use the *docker ps* command to check the status of the services. Since some services are quite heavy, please wait 3-5 minutes for the startup process to complete
+7. Use the *docker ps* command to check the status of the services. Since some services are quite heavy, please wait 3-5 minutes for the start process to complete
 ```docker
 docker ps
 ```
