@@ -38,8 +38,14 @@ cd Trigger_Dataiku_Scenario
 docker volume create dataiku_volume
 ```
 4. Navigate to ./docker/dataiku Folder and Restore Volume of Dataiku service on your machine
+
+*Linux | MacOS*
 ```docker
 docker run --rm -v dataiku_volume:/volume -v $(pwd):/backup ubuntu bash -c "cd /volume && tar xzvf /backup/dataiku_volume_backup.tar.gz --strip 1"
+```
+*PowerShell*
+```docker
+docker run --rm -v dataiku_volume:/volume -v ${PWD}:/backup ubuntu bash -c "cd /volume && tar xzvf /backup/dataiku_volume_backup.tar.gz --strip 1"
 ```
 5. Return to the ./docker directory and initialize the Airflow-init Service to check and create the necessary initial settings
 ```docker
