@@ -241,3 +241,4 @@ volumes:
   postgres-db-volume:
   redis_volume:
   dataiku_volume:
+    external: true
