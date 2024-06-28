@@ -5,7 +5,7 @@ This project is designed to demonstrate the data interaction process between Dat
 Dataiku Project overview
 
 ### The project is structured as follows:
-
+![DWH_SNOWFLAKE-flow](document/DWH_SNOWFLAKE-flow.png)
 Step 1: Data Integration
 - Data from CSV files will be ingested into the Staging layer, stored in the Raw_Churn_Dataset table within the Raw Schema, to facilitate the data transformation process
 
@@ -49,8 +49,11 @@ docker compose up airflow-init
 ```docker
 docker compose up -d
 ```
-
-
+7. Use the *docker ps* command to check the status of the services. Since some services are quite heavy, please wait 3-5 minutes for the startup process to complete
+```docker
+docker ps
+```
+![Docker ps](document/docker_ps.png)
 
 
 ### Output Dashboard
